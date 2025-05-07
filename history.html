@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task History</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-nav" id="side-nav">
+                <button id="toggleBtn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="history.html">Tasks</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggleBtn" title="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>Task Completion History</h2>
+                <div class="view-controls">
+                    <button id="dailyView" class="active">Daily View</button>
+                    <button id="weeklyView">Weekly View</button>
+                </div>
+                <div class="date-display">
+                    <span id="dateRange"></span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="taskChart"></canvas>
+                </div>
+                <div class="task-stats">
+                    <div class="stat-box">
+                        <h3 id="statsTitle">Today's Tasks</h3>
+                        <p>Completed: <span id="completedCount">0</span></p>
+                        <p>Incomplete: <span id="incompleteCount">0</span></p>
+                    </div>
+                </div>
+                <div class="task-list-controls">
+                    <button id="showAllTasks" class="active">All Tasks</button>
+                    <button id="showCompletedTasks">Completed Tasks</button>
+                    <button id="showIncompleteTasks">Incomplete Tasks</button>
+                </div>
+                <div class="task-list-container">
+                    <h3 id="taskListTitle">All Tasks</h3>
+                    <ul id="taskList" class="task-list">
+                        <!-- Tasks will be added here dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@taskmanager.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Task Manager. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="theme.js"></script>
+        <script src="history.js"></script>
+    </body>
+</html>

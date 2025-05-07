@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Settings</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-nav" id="side-nav">
+                <button id="toggleBtn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="history.html">Tasks</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggleBtn" title="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>Settings</h2>
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>Theme Settings</h3>
+                        <div class="theme-options">
+                            <div class="theme-option">
+                                <input type="radio" id="darkTheme" name="theme" value="dark" checked>
+                                <label for="darkTheme" class="theme-label">
+                                    <div class="theme-preview dark-theme">
+                                        <h4>Dark Theme</h4>
+                                        <p>Default theme with dark colors</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="theme-option">
+                                <input type="radio" id="lightTheme" name="theme" value="light">
+                                <label for="lightTheme" class="theme-label">
+                                    <div class="theme-preview light-theme">
+                                        <h4>Light Theme</h4>
+                                        <p>Light theme with orange accents</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Email Settings</h3>
+                        <form id="emailForm" class="settings-form">
+                            <div class="form-group">
+                                <label for="currentEmail">Current Email</label>
+                                <input type="email" id="currentEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newEmail">New Email</label>
+                                <input type="email" id="newEmail" required>
+                            </div>
+                            <button type="submit">Update Email</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Notification Preferences</h3>
+                        <div class="notification-settings">
+                            <div class="notification-option">
+                                <input type="checkbox" id="taskReminders" checked>
+                                <label for="taskReminders">Daily Task Reminders</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="streakAlerts" checked>
+                                <label for="streakAlerts">Streak Alerts</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="completionAlerts" checked>
+                                <label for="completionAlerts">Task Completion Alerts</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Task Management</h3>
+                        <div class="task-settings">
+                            <div class="form-group">
+                                <label for="autoDeleteDays">Auto-delete completed tasks after:</label>
+                                <select id="autoDeleteDays">
+                                    <option value="7">7 days</option>
+                                    <option value="14">14 days</option>
+                                    <option value="30">30 days</option>
+                                    <option value="90">90 days</option>
+                                    <option value="0">Never</option>
+                                </select>
+                            </div>
+                            <button id="applyTaskSettings" class="settings-button">Apply Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@taskmanager.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Task Manager. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="theme.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html> 

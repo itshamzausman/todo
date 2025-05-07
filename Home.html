@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-nav" id="side-nav">
+                <button id="toggleBtn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="history.html">Tasks</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggleBtn" title="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>Welcome to Your Task Manager</h2>
+                <p>Here you can add, filter, and manage your tasks efficiently.</p>
+                
+                <div class="task-controls">
+                    <button id="showAddFormBtn">Show Add Task Form</button>
+                    <button id="showFilterFormBtn">Show Filter Form</button>
+                </div>
+
+                <div class="task-manager">
+                    <form id="filterForm" class="hidden">
+                        <label for="filterInput">Filter Tasks:</label>
+                        <input type="text" id="filterInput" placeholder="Type to filter tasks...">
+                        <div class="filter-options">
+                            <div class="option-group">
+                                <label for="filterType">Filter by Type:</label>
+                                <select id="filterType" name="filterType">
+                                    <option value="">All Types</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Social">Social</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Filter</button>
+                    </form>
+                    <form id="taskForm" action="javascript:void(0);">
+                        <label for="taskInput">New Task:</label>
+                        <input type="text" id="taskInput" placeholder="Add a new task..." required>
+                        <div class="task-options">
+                            <div class="option-group">
+                                <label for="taskType">Type:</label>
+                                <select id="taskType" name="taskType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Social">Social</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <input type="checkbox" id="urgentTask" name="urgent">
+                                <label for="urgentTask">Mark as Urgent</label>
+                            </div>
+                            <div class="option-group">
+                                <label for="taskDeadline">Deadline:</label>
+                                <input type="datetime-local" id="taskDeadline" name="deadline">
+                            </div>
+                        </div>
+                        <div class="auto-repeat-section">
+                            <div class="option-group">
+                                <input type="checkbox" id="autoRepeat" name="autoRepeat">
+                                <label for="autoRepeat">Auto Repeat</label>
+                            </div>
+                            <div class="auto-repeat-options hidden">
+                                <div class="option-group">
+                                    <label for="repeatInterval">Repeat Every:</label>
+                                    <select id="repeatInterval" name="repeatInterval">
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                    </select>
+                                </div>
+                                <div class="option-group">
+                                    <label for="repeatTime">At Time:</label>
+                                    <input type="time" id="repeatTime" name="repeatTime" value="09:00">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit">Add Task</button>
+                    </form>
+                </div>
+                <ul id="taskList">
+                    <!-- Task items will be added here dynamically -->
+                </ul>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@taskmanager.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Task Manager. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="theme.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

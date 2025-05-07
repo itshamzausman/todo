@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side-nav" id="side-nav">
+                <button id="toggleBtn">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="history.html">Tasks</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="theme-toggle">
+                    <button id="themeToggleBtn" title="Toggle Theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="main-content">
+                <h2>Account Settings</h2>
+                <div class="account-container">
+                    <div class="profile-section">
+                        <div class="profile-picture-container">
+                            <img id="profilePicture" src="default-avatar.png" alt="Profile Picture">
+                            <div class="profile-picture-overlay">
+                                <label for="profilePictureInput" class="change-picture-btn">Change Picture</label>
+                                <input type="file" id="profilePictureInput" accept="image/*" hidden>
+                            </div>
+                        </div>
+                        <div class="user-stats">
+                            <div class="stat-item">
+                                <h3>Member Since</h3>
+                                <p id="joinDate">Loading...</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Current Streak</h3>
+                                <p id="currentStreak">0 days</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Completion Rate</h3>
+                                <p id="completionRate">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <form id="usernameForm" class="settings-form">
+                            <h3>Change Username</h3>
+                            <div class="form-group">
+                                <label for="newUsername">New Username</label>
+                                <input type="text" id="newUsername" required>
+                            </div>
+                            <button type="submit">Update Username</button>
+                        </form>
+
+                        <form id="passwordForm" class="settings-form">
+                            <h3>Change Password</h3>
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                            <button type="submit">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="login-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@taskmanager.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Task Manager. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="theme.js"></script>
+        <script src="account.js"></script>
+    </body>
+</html> 
